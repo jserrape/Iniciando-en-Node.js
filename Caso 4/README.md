@@ -1,0 +1,1 @@
+﻿# Trabajar con variables en una vista
