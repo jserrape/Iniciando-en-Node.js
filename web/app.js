@@ -1,9 +1,12 @@
- var express = require('express');
+var express = require('express');
+var app = express();
  
- var app = express();
+app.set("view engine","jade");
+
+app.use(express.static("public"));
+
+app.get("/",function(req,res){
+	res.render("index");
+});
  
- app.get("/",function(req,res){
-	 res.send("Hola mundo");
- });
- 
- app.listen(8080);
+app.listen(8080);
